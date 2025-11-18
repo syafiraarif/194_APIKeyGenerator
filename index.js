@@ -42,6 +42,7 @@ app.post('/create', (req, res) => {
 
 // ROUTE: SAVE USER
 app.post('/user/create', (req, res) => {
+    console.log(req.body);
     const { firstname, lastname, email, apikey } = req.body;
     if (!firstname || !lastname || !email || !apikey)
         return res.status(400).json({ error: "Semua kolom wajib diisi" });
